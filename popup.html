@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Website Time Tracker</title>
+  <!-- Import Lexend font -->
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Lexend', sans-serif;
+      width: 350px; /* Fixed width of popup */
+      padding: 10px;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      box-sizing: border-box; /* Ensure padding is included in width */
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      text-align: center;
+      color: #444;
+      font-weight: 600;
+    }
+
+    #site-times {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      width: 100%; /* Make sure the list takes full width */
+    }
+
+    #site-times li {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 12px; /* Rounded corners */
+      padding: 10px;
+      margin-bottom: 10px; /* Increased space between items */
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: left;
+      width: calc(100% - 20px); /* Full width minus padding */
+      box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+    #site-times li span {
+      font-weight: 600; /* Bold for site names */
+    }
+
+    .no-data {
+      text-align: center;
+      color: #888;
+      font-style: italic;
+    }
+
+    /* Ensure popup does not get cut off */
+    @media (max-width: 400px) {
+      body {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Website Time Tracker</h1>
+  <ul id="site-times">
+    <!-- Time data will be inserted here -->
+  </ul>
+  <script src="popup.js"></script>
+</body>
+</html>

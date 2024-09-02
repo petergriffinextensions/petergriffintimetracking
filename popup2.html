@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Website Time Tracker</title>
+  <!-- Import Lexend font -->
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Lexend', sans-serif;
+      width: 350px;
+      padding: 10px;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      text-align: center;
+      color: #444;
+      font-weight: 600;
+    }
+
+    #site-times {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    #site-times li {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #site-times li span {
+      font-weight: 600;
+    }
+
+    .no-data {
+      text-align: center;
+      color: #888;
+      font-style: italic;
+    }
+
+    button {
+      display: block;
+      margin: 10px auto;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #0078d7;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #005ea6;
+    }
+
+    /* Ensure popup does not get cut off */
+    @media (max-width: 400px) {
+      body {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Website Time Tracker</h1>
+  <ul id="site-times">
+    <!-- Time data will be inserted here -->
+  </ul>
+  <button id="reload-btn">Reload Times</button> <!-- Reload button -->
+  <script src="popup.js"></script>
+</body>
+</html>
